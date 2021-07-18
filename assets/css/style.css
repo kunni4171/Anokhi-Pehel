@@ -614,6 +614,7 @@ section {
   line-height: 60px;
   margin-bottom: 20px;
   text-transform: uppercase;
+  background-image: url(/assets/img/index\ pictures/a);
 }
 
 .about .content h3 {
