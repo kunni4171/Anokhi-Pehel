@@ -72,7 +72,7 @@ h6 {
     background: white;
     transition: all 0.5s;
     z-index: 997;
-    padding: 20px 0;
+    padding: 0;
     position: absolute;
 }
 
@@ -108,6 +108,16 @@ h6 {
 /**
 * Desktop Navigation 
 */
+#topbar {
+    max-width: 100%;
+    background: #ff4800;
+    padding: 0;
+    color: white;
+}
+#nottopbar {
+    background: white;
+    width: 100%;
+}
 
 .navbar {
     padding: 0;
