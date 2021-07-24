@@ -10,16 +10,110 @@
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
-  color: #444444;
+  color: darkslategrey;
+
 }
+/***Annual Rep Grid*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+.grid h2_ {
+  font-size: 45px;
+  font-weight: 300;
+  margin: 10px;
+}
+
+.grid h2 span {
+  font-size: 30px;
+}
+
+
+
+.container_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.container_grid > div {
+  cursor:pointer;
+  height: 210px;
+  background-size: cover;
+  background-attachment: fixed;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  transition: all 0.5s ease-in;
+}
+
+.container_grid> div:hover {
+  opacity: 0.7;
+  transform: scale(0.98);
+}
+
+.container_grid > div:nth-of-type(1) {
+  grid-column: 1 / 3;
+}
+
+.container_grid > div:nth-of-type(6) {
+  grid-column: 3 / 5;
+}
+
+.container_grid > div:nth-of-type(9) {
+  grid-column: 3 / 5;
+}
+
+.container_grid > div:nth-of-type(10) {
+  grid-column: 1 / 3;
+}
+
+.bg1 {
+  background: url('../img/About_annual/learning-3245792_1920.jpg');
+  color:whitesmoke;
+
+}
+.bg2 {
+  background: url('../img/About_annual/learning-3245792_1920.jpg');
+  color:whitesmoke;
+}
+/***Annual Rep Grid End*/
+
+
+
+/***#social_Team  Links********************/
+#social_Team a:hover{
+color:#ff781F;
+margin:4px;
+}
+/* Style the button that is used to open and close the collapsible content */
+.btn-link {
+  font-weight: 500;
+  color: whitesmoke;
+  text-decoration: none;
+  background-color: #ff6600;
+}
+.btn-link:hover {
+ margin:6px;
+ color: whitesmoke;
+
+  background-color:#8795a4;
+}
+
+#breadcrumbs{
+  background-color: #ff781F;
+}
+
 
 a {
   text-decoration: none;
-  color: #d9232d;
+  color:darkslategrey;
 }
 
 a:hover {
-  color: #e24d55;
+  color: whitesmoke;
   text-decoration: none;
 }
 
@@ -37,7 +131,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #d9232d;
+  background: #ff781F ;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -46,13 +140,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .back-to-top i {
   font-size: 28px;
-  color: #fff;
+  color: whitesmoke;
   line-height: 0;
 }
 
 .back-to-top:hover {
-  background: #e1444d;
-  color: #fff;
+  background:darkslategray;
+  color:whitesmoke;
+  margin:2px;
 }
 
 .back-to-top.active {
@@ -64,7 +159,7 @@ h1, h2, h3, h4, h5, h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: white;
+  background:  	darkslategrey;
   transition: all 0.5s;
   z-index: 997;
   padding: 20px 0;
@@ -89,11 +184,40 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header .logo a {
-  color: #556270;
+  color:whitesmoke;
 }
 
 #header .logo img {
   max-height: 40px;
+}
+/************************/
+@media only screen and (max-width: 767px){
+.cta-content {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    width: 100%;
+}}
+
+.cta-content {
+  
+ float:unset;
+  max-width: 50%;
+  width: 50%;
+  background-color: #ffbb38;
+}
+
+.cta-area .cta-content {
+    position: relative;
+    z-index: 1;
+    padding: 100px 5%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    width: 50%;
+    background-color: #ffbb38;
 }
 
 /*--------------------------------------------------------------
@@ -126,33 +250,45 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
   font-size: 15px;
   font-weight: 500;
-  color: #556270;
+  color:darkslategrey;
   white-space: nowrap;
   transition: 0.3s;
 }
+
+
+
 
 .navbar a i, .navbar a:focus i {
   font-size: 12px;
   line-height: 0;
   margin-left: 5px;
+  
+
+
+ 
 }
 
+
 .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
-  color: #d9232d;
+  color: #ff6600;
+  margin: 5px;
+
 }
 
 .navbar .getstarted {
-  background: #d9232d;
+  background: #ff6600;
   padding: 8px 25px;
   margin-left: 30px;
   border-radius: 4px;
   font-weight: 400;
-  color: #fff;
+  color:darkslategrey;
 }
 
 .navbar .getstarted:hover {
   color: #fff;
-  background: #e1444d;
+  background:#8795a4;
+  margin: 5px;
+
 }
 
 .navbar .dropdown ul {
@@ -173,6 +309,9 @@ h1, h2, h3, h4, h5, h6 {
 .navbar .dropdown ul li {
   min-width: 200px;
 }
+#right_linkers{
+  color:whitesmoke;
+}
 
 .navbar .dropdown ul a {
   padding: 10px 20px;
@@ -183,10 +322,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar .dropdown ul a i {
   font-size: 12px;
+  
 }
 
+
 .navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
-  color: #d9232d;
+  color: #ff6600;
 }
 
 .navbar .dropdown:hover > ul {
@@ -230,7 +371,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav-toggle.bi-x {
-  color: #fff;
+  color:#ff781F;
 }
 
 @media (max-width: 991px) {
@@ -249,7 +390,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   left: 0;
   bottom: 0;
-  background: rgba(63, 73, 83, 0.9);
+  background:darkslategrey;
   transition: 0.3s;
   z-index: 999;
 }
@@ -268,7 +409,7 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 15px;
   left: 15px;
   padding: 10px 0;
-  background-color: #fff;
+  background-color:#949494;
   overflow-y: auto;
   transition: 0.3s;
 }
@@ -280,11 +421,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
-  color: #d9232d;
+  color:#ff6600;
 }
 
 .navbar-mobile .getstarted {
   margin: 15px;
+  color:darkslategrey;
 }
 
 .navbar-mobile .dropdown ul {
@@ -312,7 +454,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-mobile .dropdown ul a:hover, .navbar-mobile .dropdown ul .active:hover, .navbar-mobile .dropdown ul li:hover > a {
-  color: #d9232d;
+  color: #ff781F;
 }
 
 .navbar-mobile .dropdown > .dropdown-active {
@@ -440,7 +582,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero .carousel-indicators li.active {
   opacity: 1;
-  background: #d9232d;
+  background: #ff781F;
 }
 
 #hero .btn-get-started {
@@ -456,11 +598,11 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
-  background: #d9232d;
+  background:#ff6600;
 }
 
 #hero .btn-get-started:hover {
-  background: #df3740;
+  background: #8795a4;
 }
 
 @media (max-width: 992px) {
@@ -514,16 +656,16 @@ section {
   margin: 0 0 5px 0;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #aaaaaa;
+  color: #808080;
   font-family: "Poppins", sans-serif;
 }
 
 .section-title h2::after {
   content: "";
   width: 120px;
-  height: 1px;
+  height: 4px;
   display: inline-block;
-  background: #e6636a;
+  background:darkslategray;
   margin: 4px 10px;
 }
 
@@ -966,7 +1108,7 @@ section {
 }
 
 .team .member .social a:hover {
-  background: #d9232d;
+  background: #ff781F;
 }
 
 .team .member .social a + a {
@@ -1971,7 +2113,7 @@ section {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #d9232d;
+  background: #ff781F;
   color: #fff;
   text-decoration: none;
 }
