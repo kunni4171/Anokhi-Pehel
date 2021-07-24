@@ -1,9 +1,4 @@
-/**
-* Template Name: Sailor - v4.3.0
-* Template URL: https://bootstrapmade.com/sailor-free-bootstrap-theme/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 (function() {
   "use strict";
 
@@ -181,3 +176,22 @@
   }
 
 })()
+
+
+
+  
+// ***************************Collapsing Menu For Batchmates (TEAM SECTION)
+
+$(document).ready(function(){
+  // Add minus icon for collapse element which is open by default
+  $(".collapse.show").each(function(){
+    $(this).prev(".card-header").find(".fa").addClass("fa-minus").removeClass("fa-plus");
+  });
+  
+  // Toggle plus minus icon on show hide of collapse element
+  $(".collapse").on('show.bs.collapse', function(){
+    $(this).prev(".card-header").find(".fa").removeClass("fa-plus").addClass("fa-minus");
+  }).on('hide.bs.collapse', function(){
+    $(this).prev(".card-header").find(".fa").removeClass("fa-minus").addClass("fa-plus");
+  });
+});
